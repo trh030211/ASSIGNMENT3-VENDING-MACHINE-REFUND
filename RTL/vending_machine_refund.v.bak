@@ -1,0 +1,62 @@
+module vending_machine_refund(
+    input clk,
+    input reset,
+    input refund,
+    input [1:0] coin,
+    output reg beverage,
+    output reg change
+);
+
+    reg [1:0] state, next_state;
+
+    // State encoding
+    parameter IDLE = 2'b00,
+              HALF = 2'b01,
+              ONE = 2'b10,
+              FULL = 2'b11;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            state <= IDLE;
+        else if (refund)
+            state <= IDLE; // Refund action, back to idle state
+        else
+            state <= next_state;
+    end
+
+    always @(*) begin
+        next_state = state;
+        beverage = 0;
+        change = 0;
+
+        case (state)
+            IDLE: begin
+                if (coin == 2'b01)
+                    next_state = HALF;
+                else if (coin == 2'b10)
+                    next_state = ONE;
+            end
+            HALF: begin
+                if (coin == 2'b01)
+                    next_state = ONE;
+                else if (coin == 2'b10) begin
+                    next_state = FULL;
+                    beverage = 1;
+                end
+            end
+            ONE: begin
+                if (coin == 2'b01) begin
+                    next_state = FULL;
+                    beverage = 1;
+                end else if (coin == 2'b10) begin
+                    next_state = IDLE;
+                    beverage = 1;
+                    change = 1;
+                end
+            end
+            FULL: begin
+                next_state = IDLE;
+            end
+        endcase
+    end
+endmodule

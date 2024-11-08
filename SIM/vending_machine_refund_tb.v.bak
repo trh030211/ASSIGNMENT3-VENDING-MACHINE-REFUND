@@ -1,0 +1,32 @@
+module vending_machine_refund_tb();
+    reg clk;
+    reg reset;
+    reg refund;
+    reg [1:0] coin;
+    wire beverage;
+    wire change;
+
+    vending_machine_refund vm_refund(
+        .clk(clk),
+        .reset(reset),
+        .refund(refund),
+        .coin(coin),
+        .beverage(beverage),
+        .change(change)
+    );
+
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;
+    end
+
+    initial begin
+        reset = 1; refund = 0; coin = 2'b00;
+        #10 reset = 0;
+        #10 coin = 2'b01;  // Insert 0.5 yuan
+        #10 refund = 1;    // Press refund
+        #10 refund = 0;    // Stop refund
+        #10 coin = 2'b10;  // Insert 1 yuan
+        #20 $finish;
+    end
+endmodule

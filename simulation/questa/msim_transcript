@@ -1,0 +1,109 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do vending_machine_refund_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGA/AS3/LAB3/RTL {D:/FPGA/AS3/LAB3/RTL/vending_machine_refund.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:26:41 on Nov 08,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA/AS3/LAB3/RTL" D:/FPGA/AS3/LAB3/RTL/vending_machine_refund.v 
+# -- Compiling module vending_machine_refund
+# 
+# Top level modules:
+# 	vending_machine_refund
+# End time: 18:26:41 on Nov 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGA/AS3/LAB3/SIM {D:/FPGA/AS3/LAB3/SIM/vending_machine_refund_tb.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:26:41 on Nov 08,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA/AS3/LAB3/SIM" D:/FPGA/AS3/LAB3/SIM/vending_machine_refund_tb.v 
+# -- Compiling module vending_machine_refund_tb
+# 
+# Top level modules:
+# 	vending_machine_refund_tb
+# End time: 18:26:41 on Nov 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  vending_machine_refund_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" vending_machine_refund_tb 
+# Start time: 18:26:41 on Nov 08,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "vending_machine_refund(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.vending_machine_refund_tb(fast)
+# Loading work.vending_machine_refund(fast)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
+# @time    0ns: pi_money_one=0, pi_money_half=0, pi_money=00, state=00001, po_cola=0, po_money=0, pi_refund=0
+# @time   20ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=0, po_money=0, pi_refund=1
+# @time   40ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time   60ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=0
+# @time   80ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00100, po_cola=0, po_money=0, pi_refund=1
+# @time  100ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=0
+# @time  120ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00100, po_cola=0, po_money=0, pi_refund=0
+# @time  140ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=1, po_money=0, pi_refund=0
+# @time  160ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00010, po_cola=0, po_money=0, pi_refund=1
+# @time  180ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  220ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=0
+# @time  240ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00100, po_cola=0, po_money=0, pi_refund=1
+# @time  260ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  320ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  340ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=0
+# @time  360ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00100, po_cola=0, po_money=0, pi_refund=1
+# @time  380ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  420ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  460ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  480ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  520ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  560ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  580ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=0, po_money=1, pi_refund=0
+# @time  600ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00010, po_cola=0, po_money=0, pi_refund=0
+# @time  620ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=01000, po_cola=0, po_money=0, pi_refund=0
+# @time  640ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=1, po_money=0, pi_refund=1
+# @time  660ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=0
+# @time  680ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00100, po_cola=0, po_money=0, pi_refund=0
+# @time  700ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=1, po_money=0, pi_refund=1
+# @time  720ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  740ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=0
+# @time  760ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00100, po_cola=0, po_money=0, pi_refund=0
+# @time  780ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=01000, po_cola=0, po_money=0, pi_refund=1
+# @time  800ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  820ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=0
+# @time  840ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00100, po_cola=0, po_money=0, pi_refund=1
+# @time  860ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=1
+# @time  880ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=0, po_money=1, pi_refund=0
+# @time  900ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00100, po_cola=0, po_money=0, pi_refund=0
+# @time  920ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=01000, po_cola=0, po_money=0, pi_refund=0
+# @time  940ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00001, po_cola=1, po_money=0, pi_refund=1
+# @time  960ns: pi_money_one=0, pi_money_half=1, pi_money=01, state=00001, po_cola=0, po_money=1, pi_refund=0
+# @time  980ns: pi_money_one=1, pi_money_half=0, pi_money=10, state=00010, po_cola=0, po_money=0, pi_refund=1
+# End time: 18:28:07 on Nov 08,2024, Elapsed time: 0:01:26
+# Errors: 0, Warnings: 1

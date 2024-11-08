@@ -1,0 +1,73 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/FPGA/AS3/LAB3/simulation/questa
+T_opt
+!s110 1731061602
+V9Rlg:JFcGJ?FNGYZ?17g61
+04 25 4 work vending_machine_refund_tb fast 0
+=1-e0d045609bd6-672de762-169-4ca8
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vvending_machine_refund
+2D:/FPGA/AS3/LAB3/RTL/vending_machine_refund.v
+Z3 !s110 1731061601
+!i10b 1
+!s100 E<b8^?Y24Y:H=oQm3U_Uf0
+IOgcDQeKZKEAl4=oAZeaB]2
+R1
+w1731061145
+8D:/FPGA/AS3/LAB3/RTL/vending_machine_refund.v
+FD:/FPGA/AS3/LAB3/RTL/vending_machine_refund.v
+!i122 0
+L0 1 78
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z6 !s108 1731061601.000000
+!s107 D:/FPGA/AS3/LAB3/RTL/vending_machine_refund.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/AS3/LAB3/RTL|D:/FPGA/AS3/LAB3/RTL/vending_machine_refund.v|
+!i113 0
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/FPGA/AS3/LAB3/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vvending_machine_refund_tb
+2D:/FPGA/AS3/LAB3/SIM/vending_machine_refund_tb.v
+R3
+!i10b 1
+!s100 [PgoI6hW^XUOnZkKhBCd00
+I]CRUAioL8fQ]K3M_E^2nF0
+R1
+w1731061581
+8D:/FPGA/AS3/LAB3/SIM/vending_machine_refund_tb.v
+FD:/FPGA/AS3/LAB3/SIM/vending_machine_refund_tb.v
+!i122 1
+L0 2 65
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/FPGA/AS3/LAB3/SIM/vending_machine_refund_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/AS3/LAB3/SIM|D:/FPGA/AS3/LAB3/SIM/vending_machine_refund_tb.v|
+!i113 0
+R7
+!s92 -vlog01compat -work work +incdir+D:/FPGA/AS3/LAB3/SIM -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
